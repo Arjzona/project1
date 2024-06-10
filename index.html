@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ортопедические матрсы</title>
+    <link rel="stylesheet" href="html.css">
+    <link rel="stylesheet" href="html1.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pop.css">
+    <link rel="stylesheet" href="nav.css">
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script language="javascript">
+            startdate = new Date();
+            clockStart = startdate.getTime();
+            function initStopwatch() {
+              var thisTime = new Date();
+              return (thisTime.getTime() - clockStart)/1000;
+            }
+            function getSecs() {
+              var tSecs = Math.round(initStopwatch());
+              var iSecs = tSecs % 60;
+              var iMins = Math.round((tSecs-30)/60);
+              var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+              var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+              document.getElementById("timer-counter").innerHTML = sMins+":"+sSecs;
+              setTimeout('getSecs()', 1000);
+            }
+            </script>
+            
+
+</head>
+<body onLoad="getSecs()" >
+    <script src="script0.js"></script>
+    <script src="script1.js"></script>
+    <script src="nav.js"></script>
+    <script src="accardeon.js"></script>
+
+        <div class="v1"> <!-- шапка -->
+            <img src="images/Логотип.png" alt="" width="144" height="103">
+            <a href="">Матрасы</a>
+            <a href="">О продукции</a>
+            <a href="">Доставка</a>
+            <a href="">Гарантии</a>
+            <a href="">Отзывы</a>
+            <a href="">Адреса магазинов</a>
+            <a href="">Партнёрам</a>
+            <a href="">Контакты</a>
+            <div class="v1_2"> 
+                <img src="images/phone (3) 1.png" alt="">
+                <p><b>8 (963) 944 99 91</b></p>
+                <button class="btn3" onclick="changeButtonColor_1(this)">Заказать звонок</button>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu">
+                <a href="">Матрасы</a>
+                <a href="">О продукции</a>
+                <a href="">Доставка</a>
+                <a href="">Гарантии</a>
+                <a href="">Отзывы</a>
+                <a href="">Адреса магазинов</a>
+                <a href="">Партнёрам</a>
+                <a href="">Контакты</a>
+            </div>
+        </div>
+        
+        <div class="v2"> <!-- главное изображение -->
+            <div class="v2_1">
+                <h1>Ортопедические матрасы для отдыха с комфортом</h1>
+                <div id="result"></div>
+                <button class="btn6">Подобрать матрас</button>
+            </div>
+            <img src="images/sleep.png" alt="" width="695" >
+        </div>
+        <div class="v3"> <!-- преимущества -->
+            <div class="v3_1">
+                <img src="images/чёрточка белая.png" alt="">
+                <div class="v3_1_1">
+                    <h1>Наши преимущества</h1>
+                    <p>Изготовление матрасов любого размера и любой формы, изготовление матрасов в сжатые сроки и не забываем про высокое качество и доступные цены!</p>
+                </div>
+            </div>
+            <div class="v3_2"> <!-- четыре преимущества -->
+                <div class="v3_2_1">
+                    <img src="images/эко.png" alt="" class="ico">
+                    <h3>Экологичность</h3>
+                    <p>Произведено в Сибири по честной цене</p>
+                </div>
+                <div class="v3_2_2">
+                    <img src="images/качество.png" alt="" class="ico">
+                    <h3>Качество</h3>
+                    <p>Лучшие комплектующие из России и мира</p>
+                </div>
+                <div class="v3_2_3">
+                    <img src="images/возможность.png" alt="" class="ico">
+                    <h3>Любая сложность</h3>
+                    <p>Любые размеры и форма за 3 дня</p>
+                </div>
+                <div class="v3_2_4">
+                    <img src="images/гарантия.png" alt="" class="ico">
+                    <h3>Гарантия</h3>
+                    <p>Гарантия до 18 месяцев Срок службы до 15 лет</p>
+                </div>
+            </div>
+        </div>
+        <div class="v4"> <!-- выберите категорию -->
+            <div class="v4_1">
+                    <img src="images/чёрточка синяя.png" alt="">
+                    <div class="v4_1_1">
+                        <h1>Наша продукция</h1>
+                        <p>Выберите из нашего огромного каталога интересующий Вас вариант, и оставьте заявку на его приобретение. Мы обязательно свяжемся с Вами!</p>
+                    </div>
+            </div>
+            <div class="v4_2">
+                    <p>Выберите категорию:</p>
+                    <div class="btn2" >
+                        <button onclick="changeButtonColor_1(this)">Матрасы</button>
+                        <button onclick="changeButtonColor_1(this)">Наматрасники</button>
+                        <button onclick="changeButtonColor_1(this)">Детские матрасы</button>
+                    </div>
+            </div>
+        </div>
+        <div class="cards"><!-- Карточки товаров -->
+            <!-- Карточка товара -->
+                <div class="card">
+            <!-- Верхняя часть -->
+                    <div class="card__top">
+                        <!-- Изображение-ссылка товара -->
+                        <a href="#" class="card__image">
+                        <img src="./images/турин-1.png" alt="" />
+                        </a>
+                    </div>
+            <!-- Нижняя часть -->
+                    <div class="card__bottom">
+                    <!-- Название карты-->
+                        <div class="card__name">
+                            <p>Турин-1</p>
+                        </div>
+                    <!-- Описание товара -->
+                        <a href="#" class="card__title">
+                            <p class="gray_card">Состав:</p>
+                                <ul>
+                                    <li>Кокосовая койра - 2 см.</li>
+                                    <li>Войлок термоскрепленный - 0,5 см.</li>
+                                    <li>Кокосовая койра - 2 см.</li>
+                                    <li>Высота матраца - 16 см.</li>
+                                    <li>Для людей весом до 120 кг.</li>
+                                </ul>
+                        </a>
+                        <hr class="card__divider"> <!-- разделитель -->
+                        <div class="card__riv">
+                            <p class="card__price">13 500р.</p> <!-- цена -->
+                            <select class="sizes">
+                                <option value="200x200">200x200</option>
+                                <option value="180x200">180x200</option>
+                                <option value="160x200">160x200</option>
+                            </select>
+                        </div>
+                    <!-- Кнопка добавить в корзину -->
+                        <div class="card__button">
+                            <a href="#" class="card__add__href">Заказать товар</a>
+                            <button class="card__add">></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/турин 2.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Турин-2</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">10 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/турин 3.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Турин-3</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">9 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/флоренция 1.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Флоренция-1</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">13 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/турин-1.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Флоренция-2</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">13 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/турин 2.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Флоренция-3</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">10 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/турин 3.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Флоенция-4</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">9 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+                <div class="card">
+                    <!-- Верхняя часть -->
+                            <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                <img src="./images/флоренция 1.png" alt="" />
+                                </a>
+                            </div>
+                    <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                            <!-- Название карты-->
+                                <div class="card__name">
+                                    <p>Неаполь-1</p>
+                                </div>
+                            <!-- Описание товара -->
+                                <a href="#" class="card__title">
+                                    <p class="gray_card">Состав:</p>
+                                        <ul>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Войлок термоскрепленный - 0,5 см.</li>
+                                            <li>Кокосовая койра - 2 см.</li>
+                                            <li>Высота матраца - 16 см.</li>
+                                            <li>Для людей весом до 120 кг.</li>
+                                        </ul>
+                                </a>
+                                <hr class="card__divider"> <!-- разделитель -->
+                                <div class="card__riv">
+                                    <p class="card__price">13 500р.</p> <!-- цена -->
+                                    <select class="sizes">
+                                        <option value="200x200">200x200</option>
+                                        <option value="180x200">180x200</option>
+                                        <option value="160x200">160x200</option>
+                                    </select>
+                                </div>
+                            <!-- Кнопка добавить в корзину -->
+                                <div class="card__button">
+                                    <a href="#" class="card__add__href">Заказать товар</a>
+                                    <button class="card__add">></button>
+                                </div>
+                            </div>
+                </div>
+        </div>
+        <button class="btn5">Показать все варианты</button>
+        <div class=" v6"> <!-- честные условия покупки -->
+            <div class="v6_1">
+                <div class="nada">
+                    <img src="images/чёрточка синяя.png" alt="">
+                    <div class="v6_1_1">
+                        <h1>Честные условия покупки</h1>
+                        <p>Мы радуем своих клиентов приятными подарками и отличными условиями обслуживания</p>
+                    </div>
+                </div>
+                <div class="v6_1_2">
+                    <div class="dilivery">
+                        <img src="images/доставка.png" >
+                        <p>Доставка у нас бесплатная</p>
+                    </div>
+                    <div class="up">
+                        <img src="images/поднимем.png" >
+                        <p>Поднимаем матрас на любой этаж бесплатно</p>
+                    </div>
+                    <div class="gift">
+                        <img src="images/дарим.png">
+                        <p>Дарим съемный чехол для матраса</p>
+                    </div>
+                </div>
+                    <button class="btn4">Подобрать матрас</button>
+            </div>
+            <div id="carousel">
+            <img src="images/1.png" alt="" width="800">
+            <img src="images/2.png" alt="" width="800">
+            <img src="images/3.png" alt="" width="800">
+            <img src="images/4.png" alt="" width="800">
+            </div>
+            <script src="fhotokarysel.js"></script>
+        </div>
+        <div class="v7"> <!-- слайдер -->
+            
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile1.jpg"  alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile2.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile3.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile4.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile5.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile6.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile7.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile8.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                        <div class="carb swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile9.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Андрей Гаспарянl</h2>
+                                <p class="description">Неделю назад стал счастливым обладателем одного из матрасов этого производителя. Теперь меня не покидает чувство, что раньше я не спал вовсе. Я стал гораздо лучше высыпаться и спина совсем не беспокоит!</p>
+    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+            </div>
+
+
+        </div>
+        <div class="v8"><!-- Карта -->
+            <p>
+                
+            </p>
+            <!-- Карта -->
+            <p  class="karta"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d788.8434636135646!2d23.827772490957816!3d53.667305355031154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e0787fc12fca93%3A0x67f751398e60de7a!2z0KPRh9GA0LXQttC00LXQvdC40LUg0L7QsdGA0LDQt9C-0LLQsNC90LjRjyAi0JPRgNC-0LTQvdC10L3RgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0L_QvtC70LjRgtC10YXQvdC40YfQtdGB0LrQuNC5INC60L7Qu9C70LXQtNC2Ig!5e0!3m2!1sru!2sby!4v1717520811903!5m2!1sru!2sby" width="742" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <script>
+            const karta = document.querySelector('.karta');
+            karta.addEventListener('mouseover', function() {
+            alert('Технические работы с картой');
+            });
+        </script>
+        </div>
+        <div class="v9">
+            <img src="images/Логотип.png" alt="">
+            <div class="v9_1">
+                <ul> 
+                    <li><a href="">Матрасы</a></li>
+                    <li><a href="">О продукции</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                </ul>
+            </div>
+            <div class="v9_2">
+                <ul>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Адреса магазинов</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="v9_3">
+                <div class="tool">Подробнее</div>
+                <details><summary><p class="gray" id="summary">Адреса салонов:</p></summary>
+                <ul class="white">
+                    <li>ул.Красный проспект д. 99 (салон "Матрасы & Кровати")</li>
+                    <li>пр.Дзержинского д. 1/4 (салон "Дюна" 3 этаж)</li>
+                    <li>ул.Гоголя д. 14 (салон "Все для сна")</li>
+                    <li>c.Сокур, ул. Советская д. 80 (Станция Комфорта)</li>
+                </ul>
+            </details>
+            </div>
+            <div class="v9_4">
+                <div class="v9_4_1"> 
+                    <img src="images/белыйтелефон.png" alt="" >
+                    <p><b>8 (963) 944 99 91</b></p>
+                </div>
+                <p>Заказать звонок</p>
+            </div>
+        </div>
+        <div class="v10">
+            <p>Все права защищены. 2020. Империа-Л.</p>
+        </div>
+        <div class="btn-up btn-up_hide"></div>
+        Вы здесь уже:
+        <span id='timer-counter' style='color:rgb(86, 124, 239);font-size:150%;font-weight:bold;'></span>
+        минут/секунд.
+        <script class="time">
+            var h=(new Date()).getHours();
+            if (h > 23 || h < 7) document.write('Уже ночь, пора спать!');
+            if (h > 6 && h < 9) document.write('Доброе утро!');
+            if (h > 9 && h < 19) document.write('Солнце ещё высоко, нужно работать!');
+            if (h > 18 && h < 23) document. write('Уже вечер, пора отдохнуть!');
+            </script>
+    
+    </div>
+    
+    <div class="popup" id="popup">
+        <h2>Специальное предложение!</h2>
+        <p>Только сегодня! Получите скидку 20% на все товары!</p>
+        <button onclick="hidePopup()">x</button>
+    </div>
+    
+    <script>
+        setTimeout(function() {
+            document.getElementById('popup').style.display = 'block';
+        }, 10000); // Показать popup через 10 секунд
+
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/btn-up.js"></script>
+    <script src="text.js"></script>
+
+    
+    
+</html>

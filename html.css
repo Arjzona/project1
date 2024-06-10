@@ -1,0 +1,264 @@
+*{padding:0; margin:0} /* убираем отступы везде */
+/* задаём сетку и занимаемое место колонки */
+div {display: grid;
+    grid-template-columns: 100%;}
+body { grid-template-columns: repeat(auto-fill, 225px);}
+div >.v8 {
+    display: grid;
+    grid-template-columns: 50% 50%;}
+div >.v4 {
+    display: grid;
+    grid-template-columns: 40% 60%;}
+div >.v5 {
+    display: grid;
+    grid-template-columns: 100%;}
+
+/* стиль для шапки */
+.v1 {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-top: 1%;}
+    .v1 >img {margin-right: 5%;
+        margin-left: 2%;
+        width: 10%;
+         height: auto}
+    .v1 >a {
+        display: inline-block; 
+        margin-right: 3%;
+        vertical-align: middle; 
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+    }
+    .v1 >a:hover {text-decoration: underline;}
+
+/* стиль для номера и иконки телефона */
+.v1_2 { 
+    display: flex;
+    align-items: center;}
+    .v1_2 >img {
+        margin-right: 0%; 
+        width: 20px;
+        height: auto;}
+
+/* главное изображение */
+.v2 { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 700px);}
+
+/* стиль для главного изображения */
+    .v2 >img { 
+        height: auto;
+        margin-left: 17% ;}
+
+/* форматирование текста на главном изображениии */
+.v2_1 {margin-top: 10%;
+margin-left: 40%;}
+    .v2_1 >h1 { font-size: 60px;}
+    .v2_1 >p {font-size: 16px;
+    margin-bottom: 40%;
+    margin-right: 20%;}
+
+/*стиль для колонки преимущества */
+.v3{ 
+    display: grid;
+    grid-template-columns: 1fr; 
+    background-color:#29ABE2 ;} /* цвет фона */
+.v3_1 { 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 14px;
+    color: aliceblue;}
+    .v3_1 >h1, .v3_1 >p {margin-left: 10%;}
+    
+    .v3_1_1 {display: grid;
+            grid-template-columns: 47%;
+            margin-left: 5%}
+    .v3_1 >img {margin-bottom: 4%;}
+
+/* cтиль для четырёх преимуществ */
+.v3 >.v3_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    margin-left: 25%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    gap: 8%;
+    font-size: 14px;
+    color: aliceblue;
+    text-align: center;}
+.ico {
+    display: inline-block;
+    margin-left: 35%;
+    margin-bottom: 10%;}
+
+.v4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;}
+.v4_1 { 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    margin-left: 12%;
+    margin-top: 12%;
+    font-size: 14px;}
+    .v4_1_1 >h1, .v4_1_1 >p {margin-left: 5%;}
+.v4_1_1 {
+    margin-left: 5%}
+.v4_1 >img {margin-bottom: 5%;}
+.v4_2 {
+    margin-top: 8%;
+    }
+
+.btn1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    cursor: pointer;}
+.form1, .form2{margin-top: 1%;}
+.blue-button { /* класс для ховера кнопок */
+    background-color: #29ABE2;
+    color: white;}
+.btn2 { /* кнопки категории вместе */
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    display: inline;
+    }
+
+.btn3 { /* кнопка шапки */
+    border-radius: 27px;
+    border: 1px solid #29ABE2;
+    cursor: pointer;
+    color: #29ABE2;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    margin-left: 20px ;
+}
+.btn2 button { /* кнопки категории */
+    border-radius: 27px;
+    border: 1px solid #29ABE2;
+    cursor: pointer;
+    color: #29ABE2;
+    width: 170px;
+    height: 50px;}
+    .btn4 { /* кнопки клика */
+        border-radius: 27px;
+        border: 1px solid #29ABE2;
+        cursor: pointer;
+        color: white;
+        width: 170px;
+        height: 50px;
+        background-color: #29ABE2;
+        margin-left: 200px;
+        margin-top: 20px;
+    }
+    .btn5 { /* кнопки клика */
+        border-radius: 27px;
+        border: 1px solid #29ABE2;
+        cursor: pointer;
+        color: white;
+        width: 170px;
+        height: 50px;
+        background-color: #29ABE2;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .btn6 { /* кнопки клика */
+        border-radius: 27px;
+        border: 1px solid #29ABE2;
+        cursor: pointer;
+        color: white;
+        width: 270px;
+        height: 60px;
+        background-color: #29ABE2;
+    }
+    .btn4, .btn5, .btn6:hover {
+        box-shadow: 4px 20px 30px rgba(51, 248, 255, 0.2);
+      }
+
+.v6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 700px)}
+    .nada { 
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start;
+        margin-left: 1%;
+        margin-top: 5%;
+        font-size: 14px;}
+        .nada >img {margin-bottom: 6%;
+        margin-left: 10%;}
+    .v6_1_2 { 
+        flex-direction: column;
+        margin-left: 10%;}
+.v6_1_1 >h1, .v6_1_1 >p {margin-left: 15%;}
+.v6 >img {margin-left: 2%;}
+
+.dilivery {display: flex;
+    align-items: center;}
+.up {display: flex;
+    align-items: center;}
+.gift {display: flex;
+        align-items: center;}
+.dilivery>p {margin-left: 5%;
+            margin-right: 25%;}
+.up >p {margin-left: 5%;
+        margin-right: 25%;}
+.gift>p {margin-left: 5%;
+        margin-right: 25%;}
+/* слайдер 2 */
+
+
+/* подвал */
+/* верхний блок */
+.v9 {
+    background-color: #0F4861; 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 3%;}
+.gray {color:#79A0B0;}
+ul {list-style-type: none;}
+li >a {color: #79A0B0; text-decoration: none; font-size: 12px;}
+.white >li {color: aliceblue; font-size: 12px;}
+.v9_4{margin-right: 10%}
+.v9_4_1 { 
+    display: flex;
+    align-items: center;
+    color: aliceblue;}
+    .v9_4_1 >img {
+        margin-right: 2%; 
+        width: 10%;
+        height: auto;}
+    .v9_4 >p{color: aliceblue; margin-left: 15%; font-size: 12px;}
+.v9 >img {margin-left: 15%; margin-top: 5%; margin-bottom: 5%;}
+/* нижний блок */
+.v10 {background-color: #0F4861;}
+.v10 >p {text-align: center; color: aliceblue; margin-bottom: 3%; margin-top: 3%; font-size: 12px;}
+
+.v8 {display: grid;
+    grid-template-columns: 1fr 1fr;}
+    .karta {margin-left: 2%;}
+
+    .too {
+        position: absolute;
+        background: #f9f9f9;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: none;
+    }
+
+
+
+
+    
+    

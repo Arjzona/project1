@@ -1,0 +1,58 @@
+.v1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(80, 74, 74);
+}
+
+.v1 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px 0;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #e6e4e4;
+    padding: 10px;
+    position: absolute;
+    top: 13%; /* Расположить меню прямо под шапкой */
+    left: 94%;
+}
+
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 5px 0;
+}
+ 
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .v1 a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+}
